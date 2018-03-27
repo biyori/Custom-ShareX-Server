@@ -1,0 +1,15 @@
+{
+  "Name": "Biyori.org",
+  "DestinationType": "ImageUploader, TextUploader, FileUploader",
+  "RequestURL": "https://?????.org/share.php",
+  "FileFormName": "share_file",
+  "Arguments": {
+    "key": "Edit this line with your own secure key, sha512 something?"
+  },
+  "ResponseType": "Headers",
+  "RegexList": [
+    "Uploaded-File: \\\"(.*)\\\""
+  ],
+  "URL": "https://????.org/i/$1,1$",
+  "DeletionURL": "https://?????.org/share.php?key=this_needs_to_be_the_same_key_generated_above&file=$1,1$"
+}
